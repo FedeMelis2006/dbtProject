@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: deliveroo
+    description: Database Deliveroo per l'esercitazione senza pagamenti
+    database: eco-rune-459817-m9
+    schema: raw_rides
+    tables:
+      - name: corse
+      - name: riders
+      - name: clienti
+      - name: locali

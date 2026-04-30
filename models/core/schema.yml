@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_corse
+    columns:
+      - name: corsa_id
+        tests:
+          - unique
+          - not_null
+      - name: cliente_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_clienti')
+                field: cliente_id

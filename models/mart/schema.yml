@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: fct_ordini
+    columns:
+      - name: id_ordine
+        tests:
+          - unique
+          - not_null
+      - name: id_utente
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_utenti')
+                field: id_utente
